@@ -1,0 +1,2 @@
+# ena_mac
+EasyNovelAssistantをMacで動かすための手順書他
