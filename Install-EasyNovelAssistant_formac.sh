@@ -15,10 +15,15 @@ if [ "$flag_not_found" = true ]; then
     exit 1
 fi
 
-if ! python -c "import tkinter" &> /dev/null; then
-    echo "[ERROR] tkintr が見つかりません。お使いのパッケージマネージャで「python3-tk」をインストールしてください。"
+if ! python3 -c "import tkinter" &> /dev/null; then
+    echo "[ERROR] tkinter が見つかりません。Python公式バイナリ3.11.9をインストールしてください。"
     exit 1
 fi
+
+#if ! python -c "import tkinter" &> /dev/null; then
+#    echo "[ERROR] tkintr が見つかりません。お使いのパッケージマネージャで「python3-tk」をインストールしてください。"
+#    exit 1
+#fi
 
 GITHUB="Zuntan03"
 APP_NAME="EasyNovelAssistant"
