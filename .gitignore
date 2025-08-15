@@ -1,0 +1,37 @@
+# バイトコードキャッシュ
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 仮想環境
+venv-enamac/
+venv/
+.venv/
+env/
+ENV/
+
+# パッケージビルド
+build/
+dist/
+*.egg-info/
+
+# Finderやメタデータ
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# その他
+*.log
+*.tmp
+*.bak
+
+# 本体の展開先
+EasyNovelAssistant/
+
+# InstallやRunすることで作られるファイルやフォルダ
+
+
+
+# ログや結果
+
+
