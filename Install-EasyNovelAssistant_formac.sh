@@ -29,6 +29,7 @@ GITHUB="Zuntan03"
 APP_NAME="EasyNovelAssistant"
 APP_VENV_DIR="venv"
 CLONE_URL="https://github.com/"$GITHUB"/EasyNovelAssistant"
+CLONE_DIR="EasyNovelAssistantProject"
 
 if [ ! -d "$APP_VENV_DIR" ]; then
     echo "https://github.com/"$GITHUB"/EasyNovelAssistant"
@@ -48,7 +49,7 @@ if [ ! -d "$APP_VENV_DIR" ]; then
     fi
 fi
 
-git clone $CLONE_URL
+git clone $CLONE_URL $CLONE_DIR
 # check return status
 if [ $? -ne 0 ]; then
     echo "[ERROR] git clone に失敗しました。"
