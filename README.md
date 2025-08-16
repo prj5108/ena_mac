@@ -70,6 +70,26 @@ ln -s EasyNovelAssistantProject/movie ./movie
 
 ```
 
+## モデルをDLすると
+- EasyNovelAssistantProject/KoboldCpp/LightChatAssistant-TypeB-2x7B_iq4xs_imatrix.gguf　がDLされる
+- 切り替えは? TODO
+- kobold_cpp.pyあたり
+
+##　本家リポジトリを不活性化するには
+```
+cd ~/projects/ena_mac/EasyNovelAssistantProject
+mv .git _git
+```
+
+## ショートカットキーの変更
+- 差し替え用ファイルを提供、手動差し替え
+- Setupスクリプトで差し替える TODO
+- モジュールシャドウ（PYTHONPATHで上書き） TODO
+    - 本家に触らず、同じパス構造を shims/ に作って先に読み込ませる。
+    - たとえば EasyNovelAssistant/src/menu/gen_menu.py を上書
+
+
+## 
 
 
 
