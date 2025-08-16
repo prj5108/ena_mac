@@ -33,8 +33,6 @@ ena_mac/
 ## tkdnd のarm64ビルドが必要（Homebrewでtcl-tk入れてコンパイル） TODO
 - むずい
 
-
-
 ## インストール
 - 任意のフォルダ(例えば~/projects)でgit cloneし、中に入ってInstall-EasyNovelAssistant_formac.shを実行してください
 - 本家とは違い、インストールのみで、起動はしません
@@ -42,24 +40,22 @@ ena_mac/
 cd ~/projects
 git clone https://github.com/prj5108/ena_mac.git
 cd ena_mac
-Install-EasyNovelAssistant_formac.sh
+./Install-EasyNovelAssistant_formac.sh
 ```
 
 ## セットアップ
-
-
-
-
+- セットアップは「venv-enamac」という環境を作り、mac用のKoboldCppをダウンロードします
+- セットアップ後にkoboldcpp-mac-arm64を起動してみてください
+    - koboldcpp-mac-arm64を初めて開く場合は、おそらくOSから拒否されます
+    - 「システム設定」の「プライバシーとセキュリティ」を開き、許可を与えてください
+```
+./Setup-EasyNovelAssistant_formac.sh
+```
 
 ## 起動
 - 中に入ってRun-EasyNovelAssistant_formac.shを実行してください
 ```
 cd ~/projects/ena_mac
-Run-EasyNovelAssistant_formac.sh
+./Run-EasyNovelAssistant_formac.sh
 ```
-
-
-
-
-
 

@@ -24,6 +24,8 @@ if [ ! -e "koboldcpp-macos-x64" ]; then
     #curl -LO https://github.com/LostRuins/koboldcpp/releases/latest/download/koboldcpp-macos-x64
     curl -LO https://github.com/LostRuins/koboldcpp/releases/download/v1.97.4/koboldcpp-mac-arm64
     chmod +x koboldcpp-mac-arm64
+    # 本家様ソースを改変することなく動くように偽のシンボリックリンクを作ってごまかします
+    ln -sf koboldcpp-mac-arm64 koboldcpp-linux-x64-cuda1150
 fi
 
 if [ ! -e "Vecteus-v1-IQ4_XS.gguf" ]; then
