@@ -59,3 +59,18 @@ cd ~/projects/ena_mac
 ./Run-EasyNovelAssistant_formac.sh
 ```
 
+##　sample,log,movie
+- 初回起動後にEasyNovelAssistantProject内にフォルダが作られるので、1階層上にシンボリックリンクを張っておくと便利です
+- 起動毎にチェックしてなければリンク作る TODO
+```
+cd ~/projects/ena_mac
+ln -s EasyNovelAssistantProject/sample ./sample
+ln -s EasyNovelAssistantProject/log ./log
+ln -s EasyNovelAssistantProject/movie ./movie
+
+```
+
+
+
+
+

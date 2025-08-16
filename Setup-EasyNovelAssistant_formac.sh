@@ -2,7 +2,8 @@
 
 # create and activate venv
 if [ ! -d "venv-enamac" ]; then
-    python -m venv venv-enamac
+    /Library/Frameworks/Python.framework/Versions/3.11/bin/python3 -m venv venv-enamac
+    source venv-enamac/bin/activate
 fi
 source venv-enamac/bin/activate
 export PATH=$(pwd)/venv-enamac/bin:$PATH

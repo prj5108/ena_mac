@@ -29,9 +29,10 @@ dist/
 EasyNovelAssistantProject/
 
 # InstallやRunすることで作られるファイルやフォルダ
-sample/
-log/
-movie/
+/sample
+/log
+/movie
+
 
 # ログや結果
 
