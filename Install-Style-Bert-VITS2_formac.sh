@@ -30,6 +30,10 @@ pip install -q "huggingface_hub[cli]" transformers certifi
 # mac でたまに出る SSL 証明書エラー対策
 export SSL_CERT_FILE="$(python -m certifi)"
 
+# pydantic
+pip uninstall -y pydantic pydantic-core
+pip install "pydantic>=2.6,<3"
+
 # bert
 mkdir -p bert
 # 日本語
@@ -43,8 +47,13 @@ hf download hfl/chinese-roberta-wwm-ext-large --local-dir bert/chinese-roberta-w
 
 # Rinne
 mkdir -p model_assets/Rinne
-hf download RinneAi/Rinne_Style-Bert-VITS2 config.json --local-dir ./model_assets/Rinne
-hf download RinneAi/Rinne_Style-Bert-VITS2 Rinne.safetensors --local-dir ./model_assets/Rinne
-hf download RinneAi/Rinne_Style-Bert-VITS2 style_vectors.npy --local-dir ./model_assets/Rinne
+#hf download RinneAi/Rinne_Style-Bert-VITS2 config.json --local-dir ./model_assets/Rinne
+#hf download RinneAi/Rinne_Style-Bert-VITS2 Rinne.safetensors --local-dir ./model_assets/Rinne
+#hf download RinneAi/Rinne_Style-Bert-VITS2 style_vectors.npy --local-dir ./model_assets/Rinne
 
-
+# これを実行すると辞書のDLはじまる
+python - <<'PY'
+import pyopenjtalk
+print("g2p:", pyopenjtalk.g2p("こんにちは"))
+print("ttos:", pyopenjtalk.tts("こんにちは")[0].shape)
+PY

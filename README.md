@@ -97,8 +97,42 @@ mv .git _git
         - EN BERT: https://huggingface.co/microsoft/deberta-v3-large
         - ZH BERT: https://huggingface.co/hfl/chinese-roberta-wwm-ext-large
         - この3ファイルをmodel_assets/Rinneに保存 https://huggingface.co/RinneAi/Rinne_Style-Bert-VITS2/tree/main/model_assets/Rinne
+
+## Style-Bert-VITS2起動
 - 起動 Run-Style-Bert-VITS2_formac.sh
-- 処理の書き換え style_bert_vits2.py
+    - 初回起動でconfig.ymlができる
+    - 5002に変更
+    - ↓インストーラに組み込む
+    - pip uninstall -y pydantic pydantic-core
+    - pip install "pydantic>=2.6,<3"
+    - これすると、辞書のDLはじまる
+    ```
+python - <<'PY'
+import pyopenjtalk
+print("g2p:", pyopenjtalk.g2p("こんにちは"))
+print("ttos:", pyopenjtalk.tts("こんにちは")[0].shape)
+PY
+    ```
+    - 3回めの起動でうごくようになる
+
+
+## 単独テスト
+- どこで実行してもよい
+- out.wavがDLされる
+```
+curl -G "http://127.0.0.1:5002/voice" \
+  --data-urlencode "text=こんにちは、テストです！" \
+  --data-urlencode "speaker=Rinne" \
+  --data-urlencode "language=JP" \
+  --output out.wav
+ffplay -nodisp -autoexit out.wav
+```
+
+
+
+
+## 処理の書き換え
+- style_bert_vits2.py
 
 
 
