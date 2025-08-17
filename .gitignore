@@ -25,8 +25,9 @@ dist/
 *.tmp
 *.bak
 
-# 本体の展開先
+# 各種展開先
 /EasyNovelAssistantProject
+/Style-Bert-VITS2
 
 # InstallやRunすることで作られるファイルやフォルダ
 /sample

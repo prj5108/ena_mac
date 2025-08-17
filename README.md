@@ -88,9 +88,17 @@ mv .git _git
     - 本家に触らず、同じパス構造を shims/ に作って先に読み込ませる。
     - たとえば EasyNovelAssistant/src/menu/gen_menu.py を上書
 
-
-## 
-
+## Style-Bert-VITS2インストール
+- インストーラ Install-Style-Bert-VITS2_formac.sh
+- 手動ダウンロード
+    - インストーラ中にHuggingFaceからのダウンロードがあります
+    - 失敗した場合は、以下から手動で取得してください
+        - JP BERT: https://huggingface.co/cl-tohoku/deberta-v2-large-japanese-char-wwm
+        - EN BERT: https://huggingface.co/microsoft/deberta-v3-large
+        - ZH BERT: https://huggingface.co/hfl/chinese-roberta-wwm-ext-large
+        - この3ファイルをmodel_assets/Rinneに保存 https://huggingface.co/RinneAi/Rinne_Style-Bert-VITS2/tree/main/model_assets/Rinne
+- 起動 Run-Style-Bert-VITS2_formac.sh
+- 処理の書き換え style_bert_vits2.py
 
 
 
